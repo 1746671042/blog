@@ -1,0 +1,335 @@
+<div class="suspension">
+    <div class="suspension-box">
+        <a href="#" class="a a-service "><i class="i"></i></a>
+        <a href="javascript:;" class="a a-service-phone "><i class="i"></i></a>
+        <a href="javascript:;" class="a a-qrcode"><i class="i"></i></a>
+        <!--<a href="#" class="a a-cart"><i class="i"></i></a>-->
+        <a href="javascript:;" class="a a-top"><i class="i"></i></a>
+        <div class="d d-service">
+            <i class="arrow"></i>
+            <div class="inner-box">
+                <div class="d-service-item clearfix">
+                    <!--<a href="#" class="clearfix">-->
+                    <a target="_blank" class="clearfix" href="http://wpa.qq.com/msgrd?v=3&uin=1746671042&site=qq&menu=yes">
+                        <span class="circle">
+                            <i class="i-qq"></i>
+                        </span>
+                        <h3>
+                            174***1042
+                        </h3>
+                        <p class="inline-qq">
+                            <span>在线联系:</span>
+                            <span>
+                                    点我噢！
+                            </span>
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="d d-service-phone">
+            <i class="arrow"></i>
+            <div class="inner-box">
+                <div class="d-service-item clearfix">
+                    <span class="circle">
+                        <i class="i-tel"></i>
+                    </span>
+                    <div class="text">
+                        <p>电话联系</p>
+                        <p class="red number">15614480650</p>
+                    </div>
+                </div>
+                <div class="d-service-intro clearfix">
+                    <a href="#"><p><i></i>可谈心</p></a>
+                    <a href="#"><p><i></i>可交友</p></a>
+                    <a href="#"><p><i></i>只要你敢来</p></a>
+                    <a href="#"><p><i></i>会有新天地！</p></a>
+                </div>
+            </div>
+        </div>
+        <div class="d d-qrcode">
+            <i class="arrow"></i>
+            <div class="inner-box">
+                <div class="qrcode-img"><img src="__STATIC__/home/images/weixin.jpg" alt=""></div>
+                <p>扫码加我噢！</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<div class="foot">
+    <footer>
+        <p>注：此网站有部分为百度,若有侵权请告知删除！
+            <a href="" target="_blank" title="乐乐博客">（乐乐个人博客）</a>
+        </p>
+        <p>
+            <a href="" target="_blank" title="">该网站勉强运行：</a>
+            <span id="sitetime"></span>
+        </p>
+        <p>@2018/10/22-至今
+            <a href="" target="_blank" title="乐乐">乐乐</a>
+            - 本站主题由www.huxiaole.cn提供
+            <span>冀ICP备18027678号-1</span>
+        </p>
+    </footer>
+</div>
+
+
+<!--轮播图开始-->
+<script src="__STATIC__/home/js/jquery-1.7.2.min.js"></script>
+<script src="__STATIC__/home/js/html5zoo.js"></script>
+<script src="__STATIC__/home/js/lovelygallery.js"></script>
+<!--轮播图结束-->
+<script src="__STATIC__/home/js/jquery.gradientify.min.js"></script>
+<script src="__STATIC__/home/js/silder.js"></script>
+<script type="text/javascript" src="__STATIC__/home/js/canvas-particle.js"></script>
+<!--评论-->
+<script type="text/javascript" src="__STATIC__/home/js/main.js"></script>
+<script type="text/javascript" src="__STATIC__/home/js/sinaFaceAndEffec.js"></script>
+
+<!--播放器js-->
+<script src="__STATIC__/home/js/player.js"></script>
+<script src="__STATIC__/home/js/playlist.js"></script>
+<script src="__STATIC__/home/js/player_database.js"></script>
+<!--播放器js-->
+<script type="text/javascript">
+    $(document).ready(function() {
+        // 背景渐变
+        $("body").gradientify({
+            gradients: [
+                { start: [255,255,255], stop: [242,159,191] },
+                { start: [255,103,69], stop: [240,154,241] },
+                { start: [33,229,241], stop: [235,236,117] }
+            ]
+        });
+
+
+        /* ----- 侧边悬浮 ---- */
+        $(document).on("mouseenter", ".suspension .a", function(){
+            var _this = $(this);
+            var s = $(".suspension");
+            var isService = _this.hasClass("a-service");
+            var isServicePhone = _this.hasClass("a-service-phone");
+            var isQrcode = _this.hasClass("a-qrcode");
+            if(isService){ s.find(".d-service").show().siblings(".d").hide();}
+            if(isServicePhone){ s.find(".d-service-phone").show().siblings(".d").hide();}
+            if(isQrcode){ s.find(".d-qrcode").show().siblings(".d").hide();}
+        });
+        $(document).on("mouseleave", ".suspension, .suspension .a-top", function(){
+            $(".suspension").find(".d").hide();
+        });
+        $(document).on("mouseenter", ".suspension .a-top", function(){
+            $(".suspension").find(".d").hide();
+        });
+        $(document).on("click", ".suspension .a-top", function(){
+            $("html,body").animate({scrollTop: 0});
+        });
+        $(window).scroll(function(){
+            var st = $(document).scrollTop();
+            var $top = $(".suspension .a-top");
+            if(st > 400){
+                $top.css({display: 'block'});
+            }else{
+                if ($top.is(":visible")) {
+                    $top.hide();
+                }
+            }
+        });
+
+
+        //判断页面是否缩放
+        $(window).resize(function() {
+            $('.div').html($(window).width());
+            var width = $(window).width()
+//           console.log(width); //浏览器时下窗口可视区域宽度 
+            if(width>1903){
+               $("header").css("overflow","hidden");
+            }else{
+                $("header").css("overflow","");
+            }
+        })
+
+
+        // $("#form_wrap").addClass('hide');
+        var c=1;
+        $(".cloud-product-ul>li").mouseenter(function(){
+            var e=$(this);
+            c=e.data("index");
+            var e=$(this);
+            setTimeout(function(){
+                if(c==e.data("index")){
+                    $(".cloud-product-ul>li").removeClass("active");
+                    e.addClass("active")
+                }
+            },120)
+        });
+
+
+
+        //图片的放大
+
+
+
+
+    });
+    //底部时间
+    function siteTime(){
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000
+        var minutes = seconds * 60
+        var hours = minutes * 60
+        var days = hours * 24
+        var years = days * 365
+        var today = new Date()
+        var todayYear = today.getFullYear()
+        var todayMonth = today.getMonth()
+        var todayDate = today.getDate()
+        var todayHour = today.getHours()
+        var todayMinute = today.getMinutes()
+        var todaySecond = today.getSeconds()
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2018,9,11,11,19,00)
+        var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond)
+        var diff = t2-t1
+        var diffYears = Math.floor(diff/years)
+        var diffDays = Math.floor((diff/days)-diffYears*365)
+        var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours)
+        var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes)
+        var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds)
+        document.getElementById("sitetime").innerHTML=diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒"
+    }
+    siteTime()
+
+
+    function timer(opj){
+        $(opj).find('ul').animate({
+            marginTop : "0px"
+        },500,function(){
+            $(this).css({marginTop : "-21px"}).find("li:first").appendTo(this);
+        })
+    }
+    $(function(){
+        var num = $('.notice_active').find('li').length;
+        if(num > 1){
+            var time=setInterval('timer(".notice_active")',3500);
+            $('.gg_more a').mousemove(function(){
+                clearInterval(time);
+            }).mouseout(function(){
+                time = setInterval('timer(".notice_active")',3500);
+            });
+        }
+    });
+
+
+
+    // 绑定表情
+    $('.face-icon').SinaEmotion($('.text'));
+    // 测试本地解析
+    function out() {
+        var inputText = $('.text').val();
+        $('#info-show ul').append(reply(AnalyticEmotion(inputText)));
+    }
+
+    var html;
+    function reply(content){
+        html  = '<li>';
+        html += '<div class="head-face">';
+        html += '<img src="__STATIC__/home/images/1.jpg" / >';
+        html += '</div>';
+        html += '<div class="reply-cont">';
+        html += '<p class="username">小小红色飞机</p>';
+        html += '<p class="comment-body">'+content+'</p>';
+        html += '<p class="comment-footer">2016年10月5日　回复　点赞54　转发12</p>';
+        html += '</div>';
+        html += '</li>';
+        return html;
+    }
+
+
+
+    // 访问量
+    var caution=false
+    function setCookie(name,value,expires,path,domain,secure)
+    {
+        var curCookie=name+"="+escape(value) +
+            ((expires)?";expires="+expires.toGMTString() : "") +
+            ((path)?"; path=" + path : "") +
+            ((domain)? "; domain=" + domain : "") +
+            ((secure)?";secure" : "")
+        if(!caution||(name + "=" + escape(value)).length <= 4000)
+        {
+            document.cookie = curCookie
+        }
+        else if(confirm("Cookie exceeds 4KB and will be cut!"))
+        {
+            document.cookie = curCookie
+        }
+    }
+    function getCookie(name)
+    {
+        var prefix = name + "="
+        var cookieStartIndex = document.cookie.indexOf(prefix)
+        if (cookieStartIndex == -1)
+        {
+            return null
+        }
+        var cookieEndIndex=document.cookie.indexOf(";",cookieStartIndex+prefix.length)
+        if(cookieEndIndex == -1)
+        {
+            cookieEndIndex = document.cookie.length
+        }
+        return unescape(document.cookie.substring(cookieStartIndex+prefix.length,cookieEndIndex))
+    }
+    function deleteCookie(name, path, domain)
+    {
+        if(getCookie(name))
+        {
+            document.cookie = name + "=" +
+                ((path) ? "; path=" + path : "") +
+                ((domain) ? "; domain=" + domain : "") +
+                "; expires=Thu, 01-Jan-70 00:00:01 GMT"
+        }
+    }
+    function fixDate(date)
+    {
+        var base=new Date(0)
+        var skew=base.getTime()
+        if(skew>0)
+        {
+            date.setTime(date.getTime()-skew)
+        }
+    }
+    var now=new Date()
+    fixDate(now)
+    now.setTime(now.getTime()+365 * 24 * 60 * 60 * 1000)
+    var visits = getCookie("counter")
+    if(!visits)
+    {
+        visits=1;
+    }
+    else
+    {
+        visits=parseInt(visits)+1;
+    }
+    setCookie("counter", visits, now)
+    $("#Visit").text(visits);
+    // document.write("您是到访的第" + visits + "位用户！")
+
+    $(".CenClose").click(function(){
+        $(".CenterNotice").css("display","none");
+    })
+
+    $('.CenterNotice').delay(5000).hide(0);
+</script>
+</body>
+</html>

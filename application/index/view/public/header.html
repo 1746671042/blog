@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{$title}</title>
+    <meta name="Author" content="乐乐"/>
+    <meta name="keywords" content="乐乐博客"/>
+    <meta name="description" content="乐乐，乐乐个人博客，关注Web后端端开发技术，同时分享前端资源和工具等，支持普通用户注册登录会员分享后端技术经验，期待你的参与！"/>
+    <link rel="stylesheet" href="__STATIC__/home/css/base.css" >
+    <link rel="stylesheet" href="__STATIC__/home/css/{$controller}.css" />
+    <!--[if lt IE 9]>
+    <script src="__STATIC__/home/js/modernizr.js"></script>
+    <![endif]-->
+</head>
+<body >
+<!--id="mydiv"-->
+<div id="blog_header">
+    <div id="headTop">
+        <header>
+            <div class="etc">嗨,终于等到了你！</div>
+            <div class="huadong">
+                <div class="huabox">
+                    <div class="notice_active">
+                        <ul>
+                            <li class="notice_active_ch">
+                                <span>乐乐博客正式上线</span>
+                                <em>2018-11-11</em>
+                            </li>
+                            <li class="notice_active_ch">
+                                <span>网站不定时更新bug,如有遇到请告知!</span>
+                                <em>2018-01-20</em>
+                            </li>
+                            <li class="notice_active_ch">
+                                <span>全站支持https，更安全，更放心。</span>
+                                <em>2018-03-20</em>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="Acknowledgement"><a href="{:url('/index/thanks')}">鸣谢</a></div>
+            <div class="Contact"><a href="{:url('/index/Blogger')}">联系我</a></div>
+            <div class="login"><a href="{:url('/index/login')}">登陆</a></div>
+            <div class="register"><a href="{:url('/index/register')}">注册</a></div>
+            <!--<div class="Username"><a href="{:url('/index/register')}">Hi,欢迎您&nbsp;&nbsp;<span>二哈传奇号</span></a></div>-->
+        </header>
+    </div>
+    <header>
+        <div id="logo">
+            <a href="/"></a>
+        </div>
+        <nav class="topnav" id="topnav">
+            <div class="nav_menu3">
+                <ul>
+                    <li class='nav-has-sub'>
+                        <a href="{:url('/')}">&nbsp;首&nbsp;页&nbsp;</a>
+                    </li>
+                    <li class='nav-has-sub'>
+                        <a href="{:url('/index/newlist')}">慢&nbsp;节&nbsp;奏</a>
+                        <ul>
+                            <li><a href="{:url('/index/work')}">工&nbsp;&nbsp;作&nbsp;</a></li>
+                            <li><a href="{:url('/index/life')}">生&nbsp;&nbsp;活&nbsp;</a></li>
+                        </ul>
+                    </li>
+                    <li class='nav-has-sub'>
+                        <a href="{:url('/index/mood')}">碎&nbsp;言碎&nbsp;语</a>
+                    </li>
+                    <li class='nav-has-sub'>
+                        <a href="{:url('/index/share')}">案&nbsp;例欣&nbsp;赏</a>
+                        <ul>
+                            <li><a href='#'>Lenovo</a></li>
+                            <li><a href='#'>仿糯米</a></li>
+                            <li><a href='#'>小程序</a></li>
+                            <li><a href='#'>花瓣网</a></li>
+                            <!--<li class='nav-has-sub'><a href='#'>论</a>-->
+                            <!--<ul>-->
+                            <!--<li><a href='#'>问答</a></li>-->
+                            <!--<li><a href='#'>解惑</a></li>-->
+                            <!--</ul>-->
+                            <!--</li>-->
+                        </ul>
+                    </li>
+                    <li class='nav-has-sub'><a href="{:url('/index/knowledge')}">学&nbsp;无止&nbsp;境</a></li>
+                    <li class='nav-has-sub'><a href="{:url('/index/about')}">&nbsp;&nbsp;关&nbsp;于&nbsp;&nbsp;</a>
+                        <ul>
+                            <li><a href="{:url('/index/Blogger')}">博&nbsp;&nbsp;主&nbsp;</a></li>
+                            <li><a href="{:url('/index/Blog')}">博&nbsp;&nbsp;客&nbsp;</a></li>
+                        </ul>
+                    </li>
+                    <li class='nav-has-sub'><a href="{:url('/index/book')}">&nbsp;留&nbsp;言&nbsp;</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+</div>
